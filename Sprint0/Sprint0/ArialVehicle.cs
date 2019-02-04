@@ -59,10 +59,7 @@ namespace Sprint0
                 defaultFly = 1000;
             }
 
-            if(CurrentAltitude + defaultFly <= MaxAltitude)
-            {
-                CurrentAltitude += defaultFly;
-            }  
+           FlyUp(defaultFly);
         }
 
         public void FlyUp(int HowManyFeet)
