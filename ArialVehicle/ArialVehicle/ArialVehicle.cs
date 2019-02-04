@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ArialVehicle
+namespace Sprint0
 {
     class ArialVehicle
     {
