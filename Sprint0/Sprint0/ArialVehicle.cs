@@ -13,20 +13,21 @@ namespace Sprint0
 
         public string About()
         {
-            return getEngineStartedString() + "\n\tThis " + nameof(ArialVehicle) + " has a max altitude of \n\tIt's current altitude is " + CurrentAltitude;
+            return getEngineStartedString() + "\nThis " + this + " has a max altitude of " + MaxAltitude +  "\nIt's current altitude is " + CurrentAltitude;
         }
 
         public ArialVehicle()
         {
             CurrentAltitude = 0;
             IsFlying = false;
+            Engine = new Engine();
         }
 
         public void FlyDown()
         {
             if (CurrentAltitude - 1000 < 0)
             {
-                //crash
+                Console.WriteLine(this + " flew down too far and crashed");
             }
             else
             {
@@ -38,7 +39,7 @@ namespace Sprint0
         {
             if(CurrentAltitude - HowManyFeet < 0)
             {
-                //crash
+                Console.WriteLine(this + " flew down too far and crashed");
             }
             else
             {
@@ -48,9 +49,19 @@ namespace Sprint0
 
         public void FlyUp()
         {
-            if(CurrentAltitude + 1000 <= MaxAltitude)
+            int defaultFly;
+            if(this is ToyPlane)
             {
-                CurrentAltitude += 1000;
+                defaultFly = 10;
+            }
+            else
+            {
+                defaultFly = 1000;
+            }
+
+            if(CurrentAltitude + defaultFly <= MaxAltitude)
+            {
+                CurrentAltitude += defaultFly;
             }  
         }
 
@@ -66,11 +77,11 @@ namespace Sprint0
         {
             if (Engine.IsStarted)
             {
-                return nameof(ArialVehicle) + " engine is started\t";
+                return this + " engine is started\t";
             }
             else
             {
-                return nameof(ArialVehicle) + " engine is not started\t";
+                return this + " engine is not started\t";
             }
         }
 
@@ -86,13 +97,13 @@ namespace Sprint0
 
         public string TakeOff()
         {
-            if (Engine.IsStarted) 
+            if (!Engine.IsStarted) 
             {
-                return nameof(Airplane) + " can't fly it's engine is not started.";
+                return this + " can't fly it's engine is not started.";
             }
             else
             {
-                return nameof(Airplane) + " is flying";
+                return this + " is flying";
             }
         }
     }

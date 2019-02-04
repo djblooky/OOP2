@@ -10,19 +10,20 @@ namespace Sprint0
 
         public new string About()
         {
-            return getWindUpString();
-            //add other about info?
+            return getWindUpString() + "\n"+
+                getEngineStartedString() + "\nThis " + this + 
+                " has a max altitude of " + MaxAltitude + "\nIt's current altitude is " + CurrentAltitude;
         }
 
         public string getWindUpString()
         {
             if (isWoundUP)
             {
-                return nameof(ToyPlane) + " is wound up.";
+                return this + " is wound up.";
             }
             else
             {
-                return nameof(ToyPlane) + " is not wound up.";
+                return this + " is not wound up.";
             }
             
         }
@@ -35,13 +36,24 @@ namespace Sprint0
             }
             else
             {
-                Console.WriteLine("Not wound up, engine is not started");
+                Console.WriteLine("Can't start engine until wound up!");
             }
         }
 
-        public new string TakeOff() //?
+        public new string TakeOff() 
         {
-            return "";
+            if (!isWoundUP)
+            {
+                return this + " can't fly, it isn't wound up!";
+            }
+            if (!Engine.IsStarted)
+            {
+                return this + " can't fly it's engine is not started.";
+            }
+            else 
+            {
+                return this + " is flying";
+            }
         }
 
         public ToyPlane()

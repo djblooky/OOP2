@@ -8,6 +8,8 @@ namespace Sprint0
         {
             Tester test = new Tester();
             test.Test();
+
+            Console.ReadLine();
         }
     }
 
@@ -16,12 +18,12 @@ namespace Sprint0
         public void Test()
         {
             Console.WriteLine("Flying Vehicle Tester......................................................");
-            Console.WriteLine("\nAirlplane.cs...............................................................");
+            Console.WriteLine("\nAirplane.cs...............................................................");
         
             Airplane ap = new Airplane();
             Console.WriteLine(ap.About());
 
-            Console.WriteLine("\nAireplaneTakeOffTests...............................................................");
+            Console.WriteLine("\nAirplaneTakeOffTests...............................................................");
             Console.WriteLine("\nCall ap.TakeOff():");
             Console.WriteLine(ap.TakeOff());  
                                       
@@ -37,19 +39,58 @@ namespace Sprint0
             Console.WriteLine("\nCall ap.FlyUp(44000) Fly up to 45,000ft:");
             ap.FlyUp(44000);    //Fly up tp 45,000 ft shouldn't work
             Console.WriteLine(ap.About());
-            Console.WriteLine("\nCall ap.FlyUp(44000) Fly up another 40,000ft shouldn't work");
-            ap.FlyUp(40000);    //Fly up tp 41,000 ft shouldn't work
+            Console.WriteLine("\nCall ap.FlyUp(40000) Fly up another 40,000ft should work");
+            ap.FlyUp(40000);    //Fly up tp 41,000 ft should work
             Console.WriteLine(ap.About());
       
             //Land
             Console.WriteLine("\nFly Down.................................................................");
             Console.WriteLine("Call ap.FlyDown(50000) Fly Down 50,000 ft");
-            ap.FlyDown(50000);   //Land by floying down 50,000 ft = Crash and shouldn't work
+            ap.FlyDown(50000);   
             Console.WriteLine(ap.About());
-            Console.WriteLine("Call ap.FlyDown(ap.CurrentAltitude) this should land");
-            ap.FlyDown(ap.CurrentAltitude); //Land by flying down current altitiute
+            Console.WriteLine("\nCall ap.FlyDown(ap.CurrentAltitude) this should land");
+            ap.FlyDown(ap.CurrentAltitude); 
             Console.WriteLine(ap.About());
+
+            Console.WriteLine("\nToy plane tests.................................................................");
+
+            ToyPlane tp = new ToyPlane();
+            Console.WriteLine(tp.About());
+
+            Console.WriteLine("\nToyPlane TakeOffTests...............................................................");
+            Console.WriteLine("\nCall tp.TakeOff():"); //engine not started and not wound, wont take off
+            Console.WriteLine(tp.TakeOff());
+
+            Console.WriteLine("\nCall tp.WindUp():"); //engine not started, wont take off
+            tp.WindUp();
+            Console.WriteLine(tp.TakeOff());
+
+            Console.WriteLine("\nCall tp.StartEngine():"); //will take off
+            tp.StartEngine();
+            Console.WriteLine(tp.TakeOff());
+
+
+            //Fly up
+            Console.WriteLine("\nFly up Tests...................................................................");
+            Console.WriteLine("Call tp.FlyUp() fly to 10ft default");
+            tp.FlyUp();
+            Console.WriteLine(tp.About());
+            Console.WriteLine("\nCall tp.FlyUp(44) Fly up to 54ft:");
+            tp.FlyUp(44);    
+            Console.WriteLine(tp.About());
+            Console.WriteLine("\nCall ap.FlyUp(40) Fly up another 40ft should work");
+            tp.FlyUp(40);    
+            Console.WriteLine(tp.About());
+
+            //Land
+            Console.WriteLine("\nFly Down.................................................................");
+            Console.WriteLine("Call tp.FlyDown(60) Fly Down 60 ft");
+            tp.FlyDown(60);   
+            Console.WriteLine(tp.About());
+            Console.WriteLine("\nCall tp.FlyDown(tp.CurrentAltitude) this should land");
+            tp.FlyDown(tp.CurrentAltitude); 
+            Console.WriteLine(tp.About());
         }
     }
-    }
+    
 }
