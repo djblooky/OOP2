@@ -8,7 +8,7 @@ namespace Sprint0
     {
         public Airplane()
         {
-
+            MaxAltitude = 41000;
         }
     }
 }

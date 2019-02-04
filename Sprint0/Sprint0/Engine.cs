@@ -6,7 +6,7 @@ namespace Sprint0
 {
     class Engine
     {
-        bool IsStarted { get; set; }
+        public bool IsStarted { get; set; }
 
         public string About()
         {
