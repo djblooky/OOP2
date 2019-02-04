@@ -13,6 +13,7 @@ namespace DogInClassSprint1
         public string Name{ get; protected set; }
         public string BarkSound { get; protected set; }
         public int BarkCount { get; protected set; }
+        public char BarkSplit = ',';
 
         public Dog()
         {
@@ -34,7 +35,7 @@ namespace DogInClassSprint1
             string BarkString = "";
             for(int i=0; i < HowManyTimes; i++)
             {
-                BarkString += this.Bark();
+                BarkString += this.Bark() + BarkSplit;
             }
 
             return BarkString;
