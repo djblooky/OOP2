@@ -6,7 +6,7 @@ namespace Sprint0
 {
     public class ToyPlane : Airplane
     {
-        bool isWoundUP = false; 
+        bool isWoundUP; 
 
         public new string About()
         {
@@ -39,7 +39,7 @@ namespace Sprint0
             }
         }
 
-        public new string TakeOff()
+        public new string TakeOff() //?
         {
             return "";
         }
@@ -47,6 +47,7 @@ namespace Sprint0
         public ToyPlane()
         {
             MaxAltitude = 50;
+            isWoundUP = false;
         }
 
         public void UnWind()

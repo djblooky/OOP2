@@ -10,12 +10,19 @@ namespace Sprint0
 
         public string About()
         {
-            return "";
+            if (IsStarted)
+            {
+                return nameof(Engine) + " is started";
+            }
+            else
+            {
+                return nameof(Engine) + " is not started";
+            }
         }
 
         public Engine()
         {
-
+            IsStarted = false;
         }
 
 

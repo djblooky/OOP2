@@ -18,7 +18,8 @@ namespace Sprint0
 
         public ArialVehicle()
         {
-
+            CurrentAltitude = 0;
+            IsFlying = false;
         }
 
         public void FlyDown()
