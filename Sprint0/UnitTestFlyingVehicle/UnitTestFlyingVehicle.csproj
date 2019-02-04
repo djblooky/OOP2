@@ -53,7 +53,6 @@
     <Compile Include="AirportTests.cs" />
     <Compile Include="ArialVehicleTests.cs" />
     <Compile Include="EngineTests.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
