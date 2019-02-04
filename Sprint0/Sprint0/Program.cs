@@ -40,18 +40,15 @@ namespace Sprint0
             Console.WriteLine("\nCall ap.FlyUp(44000) Fly up another 40,000ft shouldn't work");
             ap.FlyUp(40000);    //Fly up tp 41,000 ft shouldn't work
             Console.WriteLine(ap.About());
-            /*
-             * Output:
-             */
-
+      
             //Land
-            WriteLine("\nFly Down.................................................................");
-            WriteLine("Call ap.FlyDown(50000) Fly Down 50,000 ft");
+            Console.WriteLine("\nFly Down.................................................................");
+            Console.WriteLine("Call ap.FlyDown(50000) Fly Down 50,000 ft");
             ap.FlyDown(50000);   //Land by floying down 50,000 ft = Crash and shouldn't work
-            WriteLine(ap.About());
-            WriteLine("Call ap.FlyDown(ap.CurrentAltitude) this should land");
+            Console.WriteLine(ap.About());
+            Console.WriteLine("Call ap.FlyDown(ap.CurrentAltitude) this should land");
             ap.FlyDown(ap.CurrentAltitude); //Land by flying down current altitiute
-            WriteLine(ap.About());
+            Console.WriteLine(ap.About());
         }
     }
     }

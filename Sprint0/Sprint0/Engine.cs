@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sprint0
 {
-    class Engine
+    public class Engine
     {
         public bool IsStarted { get; set; }
 
