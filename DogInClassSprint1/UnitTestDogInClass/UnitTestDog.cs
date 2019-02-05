@@ -25,6 +25,36 @@ namespace UnitTestDogInClass
         }
 
         [TestMethod]
+        public void TestDogConstructor()
+        {
+            //arrange
+            d = new Dog(); //add using for dog
+
+            //act
+            
+
+            //assert
+            Assert.AreEqual(1, d.Age); //default age is 1
+            Assert.AreEqual(0, d.BarkCount); //default barks 0
+            Assert.AreEqual("Fido", d.Name);
+            Assert.AreEqual("Woof", d.BarkSound);
+            Assert.AreEqual(1, d.Weight);
+            Assert.AreEqual(',', d.BarkSplit);
+        }
+
+        [TestMethod]
+        public void TestDogAbout()
+        {
+            //arrange
+            d = new Dog(); //add using for dog
+
+            //act
+
+            //assert
+            Assert.AreEqual($"Hello my name is {d.Name} I'm {d.Age} years old. My bark sounds like {d.BarkSound}. Ive barked {d.BarkCount} times.", d.About());
+        }
+
+        [TestMethod]
         public void TestDogBark()
         {
             //arrange
