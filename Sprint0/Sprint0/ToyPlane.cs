@@ -28,7 +28,7 @@ namespace Sprint0
             
         }
 
-        public new void StartEngine()
+        public override void StartEngine()
         {
             if (isWoundUP)
             {
@@ -40,7 +40,7 @@ namespace Sprint0
             }
         }
 
-        public new string TakeOff() 
+        public override string TakeOff() 
         {
             if (!isWoundUP)
             {
