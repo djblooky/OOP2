@@ -82,7 +82,7 @@ namespace Sprint0
             }
         }
 
-        public void StartEngine()
+        public virtual void StartEngine()
         {
             Engine.IsStarted = true;
         }
@@ -92,7 +92,7 @@ namespace Sprint0
             Engine.IsStarted = false;
         }
 
-        public string TakeOff()
+        public virtual string TakeOff()
         {
             if (!Engine.IsStarted) 
             {
