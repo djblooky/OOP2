@@ -25,14 +25,7 @@ namespace Sprint1
 
         public void FlyDown()
         {
-            if (CurrentAltitude - 1000 < 0)
-            {
-                Console.WriteLine(this + " flew down too far and crashed");
-            }
-            else
-            {
-                CurrentAltitude -= 1000;
-            }
+            FlyDown(1000);
         }
 
         public void FlyDown(int HowManyFeet)

@@ -24,22 +24,52 @@ namespace Sprint1
 
         string AllTakeOff()
         {
-            return "";
+            if(Vehicles.Count > 0)
+            {
+                foreach (ArialVehicle a in Vehicles)
+                {
+                    TakeOff(a);
+                }
+
+                return null;
+            }
+            else
+            {
+                return "The airport is empty";
+            }
+            
+            
         }
 
         string Land(ArialVehicle a)
         {
-            return "";
+            Vehicles.Add(a);
+            a.FlyDown(a.CurrentAltitude); //fly down to ground
+            return this + " has landed at the airport.";
         }
 
         string Land(List<ArialVehicle> landing)
         {
-            return "";
+            if(Vehicles.Count < MaxVehicles)
+            {
+                foreach(ArialVehicle a in landing)
+                {
+                    Land(a);
+                }
+
+                return null;
+            }
+            else
+            {
+                return "The airport is full";
+            }
+            
         }
 
         string TakeOff(ArialVehicle a)
         {
-            return "";
+            Vehicles.Remove(a); 
+            return a.TakeOff();
         }
 
 
