@@ -6,7 +6,7 @@ namespace Sprint0
 {
     public class ToyPlane : Airplane
     {
-        bool isWoundUP; 
+        public bool isWoundUP; 
 
         public new string About()
         {
