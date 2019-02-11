@@ -12,11 +12,11 @@ namespace Sprint0
         {
             if (IsStarted)
             {
-                return nameof(Engine) + " is started";
+                return this + " is started";
             }
             else
             {
-                return nameof(Engine) + " is not started";
+                return this + " is not started";
             }
         }
 
