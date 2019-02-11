@@ -6,10 +6,10 @@ namespace Sprint1
 {
     public abstract class ArialVehicle
     {
-        public int CurrentAltitude { get; set; }
-        public int MaxAltitude { get; set; }
-        bool IsFlying { get; set; }
-        public Engine Engine { get; set; }
+        public int CurrentAltitude { get; protected set; }
+        public int MaxAltitude { get; protected set; }
+        public bool IsFlying { get; protected set; }
+        public Engine Engine { get; protected set; }
 
         public string About()
         {
