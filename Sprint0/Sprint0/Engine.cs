@@ -25,6 +25,5 @@ namespace Sprint0
             IsStarted = false;
         }
 
-
     }
 }

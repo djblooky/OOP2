@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Airplane;
+using Sprint0;
 
 namespace UnitTestFlyingVehicle
 {
@@ -14,7 +14,7 @@ namespace UnitTestFlyingVehicle
             Airplane a = new Airplane();
 
             //assert
-            Assert.AreEqual(41000, MaxAltitude); //airplanes should have max alt of 41000
+            Assert.AreEqual(41000, a.MaxAltitude); //airplanes should have max alt of 41000
         }
     }
 }
