@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Sprint1
 {
-    class Helicopter : ArialVehicle
+    public class Helicopter : ArialVehicle
     {
         public Helicopter()
         {
