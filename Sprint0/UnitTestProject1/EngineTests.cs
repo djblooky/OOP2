@@ -4,12 +4,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestFlyingVehicle
 {
     [TestClass]
-    public class ToyPlaneTests
+    public class EngineTests
     {
         [TestMethod]
         public void TestMethod1()
         {
-
         }
     }
 }

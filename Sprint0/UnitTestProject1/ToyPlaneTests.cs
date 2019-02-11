@@ -1,7 +1,6 @@
-﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestFlyingVehicle
+namespace UnitTestProject1
 {
     [TestClass]
     public class ToyPlaneTests
@@ -9,7 +8,6 @@ namespace UnitTestFlyingVehicle
         [TestMethod]
         public void TestMethod1()
         {
-
         }
     }
 }
