@@ -8,7 +8,7 @@ namespace Sprint1
     {
         public int CurrentAltitude { get; protected set; }
         public int MaxAltitude { get; protected set; }
-        public bool IsFlying { get; protected set; }
+        public bool IsFlying { get; set; }
         public Engine Engine { get; protected set; }
 
         public string About()

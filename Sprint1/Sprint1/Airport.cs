@@ -43,27 +43,30 @@ namespace Sprint1
 
         string Land(ArialVehicle a)
         {
-            Vehicles.Add(a);
-            a.FlyDown(a.CurrentAltitude); //fly down to ground
-            return this + " has landed at the airport.";
-        }
-
-        string Land(List<ArialVehicle> landing)
-        {
-            if(Vehicles.Count < MaxVehicles)
+            
+            if (Vehicles.Count < MaxVehicles) //airport is not full
             {
-                foreach(ArialVehicle a in landing)
-                {
-                    Land(a);
-                }
-
-                return null;
+                Vehicles.Add(a);
+                a.IsFlying = false;
+                a.FlyDown(a.CurrentAltitude); //fly down to ground
             }
             else
             {
                 return "The airport is full";
             }
-            
+
+            return this + " has landed at the airport.";
+        }
+
+        string Land(List<ArialVehicle> landing)
+        {
+            foreach (ArialVehicle a in landing)
+            {
+                Land(a);
+            }
+
+            return "Landed all vehicles";
+  
         }
 
         string TakeOff(ArialVehicle a)
@@ -71,7 +74,6 @@ namespace Sprint1
             Vehicles.Remove(a); 
             return a.TakeOff();
         }
-
 
     }
 }
