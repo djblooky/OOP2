@@ -1,15 +1,20 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Sprint2;
 
 namespace InstrumentTests
 {
     [TestClass]
-    public class InstrumentTests
+    public abstract class InstrumentTests
     {
+        InstrumentTestClass i; //cant create an instance of the abstract class instrument
+
         [TestMethod]
         public virtual void TestAbout()
         {
+            i = new InstrumentTestClass();
 
+            Assert.AreEqual($"This {i.Material} {i} costs ${i.Cost} and makes a {i.Sound} sound. \n{i.GetIsPlayingString()}", i.About());
         }
 
         [TestMethod]
