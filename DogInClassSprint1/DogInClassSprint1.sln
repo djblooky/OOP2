@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogInClassSprint1", "DogInC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestDogInClass", "UnitTestDogInClass\UnitTestDogInClass.csproj", "{9ADCB3F9-4C45-48E4-AD39-C81786575308}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDog", "ClassLibraryDog\ClassLibraryDog.csproj", "{3E4DF5D3-914E-43F7-9D3C-7E43BC19A191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9ADCB3F9-4C45-48E4-AD39-C81786575308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADCB3F9-4C45-48E4-AD39-C81786575308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADCB3F9-4C45-48E4-AD39-C81786575308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E4DF5D3-914E-43F7-9D3C-7E43BC19A191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E4DF5D3-914E-43F7-9D3C-7E43BC19A191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E4DF5D3-914E-43F7-9D3C-7E43BC19A191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E4DF5D3-914E-43F7-9D3C-7E43BC19A191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
