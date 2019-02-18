@@ -54,6 +54,8 @@
     <Compile Include="StringInstrumentTests.cs" />
     <Compile Include="HornTests.cs" />
     <Compile Include="TrumpetTests.cs" />
+    <Compile Include="GuitarTests.cs" />
+    <Compile Include="UkuleleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
