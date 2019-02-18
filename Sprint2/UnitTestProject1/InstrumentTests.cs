@@ -26,14 +26,14 @@ namespace InstrumentTests
         }
 
         [TestMethod]
-        public void TestPlay() //finish?
+        public void TestPlay() 
         {
             i = new InstrumentTestClass();
 
             i.Play();
 
             Assert.AreEqual(true, i.IsPlaying);
-            //test makesound ?
+            //test call to makesound ?
         }
 
         [TestMethod]
@@ -68,17 +68,33 @@ namespace InstrumentTests
         }
 
         [TestMethod]
-        public void TestMakeSound(int HowManyTimes) //finish
+        public void TestMakeSound(int HowManyTimes) 
         {
             i = new InstrumentTestClass();
 
+            int count = 0;
+            string SoundString = "";
+            while (count < HowManyTimes)
+            {
+                SoundString += i.Sound + i.soundSplit;
+                count++;
+            }         
+
+            Assert.AreEqual(SoundString, i.MakeSound(HowManyTimes));
         }
 
         [TestMethod]
-        public void TestGetIsPlayingString() //finish
+        public void TestGetIsPlayingString() 
         {
             i = new InstrumentTestClass();
 
+            i.IsPlaying = true;
+
+            Assert.AreEqual(i + " is playing!", i.GetIsPlayingString());
+
+            i.IsPlaying = false;
+
+            Assert.AreEqual(i + " is not playing!", i.GetIsPlayingString());
         }
     }
 }
