@@ -8,8 +8,8 @@
     <ProjectGuid>{1B2E1355-A0BE-444A-89BC-2E20A9B408A7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject1</RootNamespace>
-    <AssemblyName>UnitTestProject1</AssemblyName>
+    <RootNamespace>InstrumentTests</RootNamespace>
+    <AssemblyName>InstrumentTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,6 +51,9 @@
   <ItemGroup>
     <Compile Include="InstrumentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringInstrumentTests.cs" />
+    <Compile Include="HornTests.cs" />
+    <Compile Include="TrumpetTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

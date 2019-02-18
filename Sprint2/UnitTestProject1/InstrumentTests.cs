@@ -7,49 +7,49 @@ namespace InstrumentTests
     public class InstrumentTests
     {
         [TestMethod]
-        public void TestInstrumentAbout()
+        public virtual void TestAbout()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentConstructor()
+        public virtual void TestConstructor()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentPlay()
+        public void TestPlay()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentStopPlaying()
+        public void TestStopPlaying()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentGetSound()
+        public void TestGetSound()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentMakeSound()
+        public void TestMakeSound()
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentMakeSound(int HowManyTimes)
+        public void TestMakeSound(int HowManyTimes)
         {
 
         }
 
         [TestMethod]
-        public void TestInstrumentGetIsPlayingString()
+        public void TestGetIsPlayingString()
         {
 
         }
