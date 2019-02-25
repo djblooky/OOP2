@@ -75,7 +75,7 @@ namespace Sprint1
             }
         }
 
-        public void StartEngine()
+        public virtual void StartEngine()
         {
             Engine.IsStarted = true;
         }
@@ -85,7 +85,7 @@ namespace Sprint1
             Engine.IsStarted = false;
         }
 
-        public string TakeOff()
+        public virtual string TakeOff()
         {
             if (!Engine.IsStarted) 
             {
