@@ -34,6 +34,10 @@ namespace Sprint1
             {
                 base.StartEngine();
             }
+            else
+            {
+                Console.WriteLine("Can't start engine until wound up!");
+            }
         }
 
         public override string TakeOff() 

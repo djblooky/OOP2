@@ -32,7 +32,7 @@ namespace Sprint0
         {
             if (isWoundUP)
             {
-                Engine.IsStarted = true;
+                base.StartEngine();
             }
             else
             {
@@ -46,14 +46,8 @@ namespace Sprint0
             {
                 return this + " can't fly, it isn't wound up!";
             }
-            if (!Engine.IsStarted)
-            {
-                return this + " can't fly it's engine is not started.";
-            }
-            else 
-            {
-                return this + " is flying";
-            }
+            
+            return base.TakeOff();
         }
 
         public ToyPlane()
