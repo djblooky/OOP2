@@ -9,22 +9,18 @@ namespace Sprint1
         private int MaxVehicles;
         private List<ArialVehicle> Vehicles;
 
-        public string AirportCode { get; protected set; }
+        public string AirportCode { get; protected set; }      
 
-        public Airport()
+        public Airport(string Code) : this(Code, 5)
         {
-            Vehicles = new List<ArialVehicle>();
-        }            
-
-        public Airport(string Code)
-        {
-            AirportCode = Code;
+           //default to 5 vehicles
         }
 
         public Airport(string Code, int MaxVehicles)
         {
             AirportCode = Code;
             this.MaxVehicles = MaxVehicles;
+            Vehicles = new List<ArialVehicle>();
         }
 
         string AllTakeOff()
