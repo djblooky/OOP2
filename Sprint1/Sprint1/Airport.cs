@@ -7,9 +7,14 @@ namespace Sprint1
     class Airport
     {
         private int MaxVehicles;
-        private List<ArialVehicle> Vehicles = new List<ArialVehicle>();
+        private List<ArialVehicle> Vehicles;
 
         public string AirportCode { get; protected set; }
+
+        public Airport()
+        {
+            Vehicles = new List<ArialVehicle>();
+        }            
 
         public Airport(string Code)
         {
