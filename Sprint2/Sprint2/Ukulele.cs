@@ -10,8 +10,7 @@ namespace Sprint2
     {
         public Ukulele()
         {
-            Sound = "Small Strum";
-            NumberOfStrings = 4;
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Sprint2
     {
         public Trumpet()
         {
-            Sound = "Toot";
+            
         }
     }
 }

@@ -10,8 +10,7 @@ namespace Sprint2
     {
         public Guitar()
         {
-            Sound = "Strum";
-            NumberOfStrings = 6;
+            
         }
     }
 }

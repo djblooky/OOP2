@@ -33,7 +33,7 @@ namespace InstrumentTests
             i.Play();
 
             Assert.AreEqual(true, i.IsPlaying);
-            //test call to makesound ?
+            Assert.AreEqual(i.MakeSound(3), i.MakeSound());
         }
 
         [TestMethod]
