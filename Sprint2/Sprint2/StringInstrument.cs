@@ -12,12 +12,13 @@ namespace Sprint2
 
         public StringInstrument()
         {
-           
+            Material = "Wood";
         }
 
         public override string About()
         {
-            return "";
+            base.About();
+            return this + $" has {NumberOfStrings} strings";
         }
     }
 }

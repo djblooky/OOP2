@@ -18,44 +18,57 @@ namespace Sprint2
 
         public virtual string About()
         {
-            return "";
+            return $"This {Material} {this} costs ${Cost} and makes a {Sound} sound. \n{GetIsPlayingString()}";
         }
 
         public Instrument()
         {
-            
+            IsPlaying = false;
         }
 
         public void Play()
         {
-            
+            IsPlaying = true;
+            MakeSound();
         }
 
         public void StopPlaying()
         {
-            
+            IsPlaying = false;
         }
 
         public string GetSound()
         {
-            return "";
+            SoundCount++;
+            return Sound;
         }
 
         public string MakeSound() 
         {
-            return "";
+            return MakeSound(3); //by default instruments make 3 sounds
         }
 
         public string MakeSound(int HowManyTimes)
         {
             string soundString = "";
-         
+            for (int i = 0; i < HowManyTimes; i++)
+            {
+                soundString += GetSound() + soundSplit;
+            }
+
             return soundString;
         }
 
         public string GetIsPlayingString()
         {
-            return "";
+            if (IsPlaying)
+            {
+                return this + " is playing!";
+            }
+            else
+            {
+                return this + " is not playing!";
+            }
         }
 
 
