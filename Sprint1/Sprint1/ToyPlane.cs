@@ -28,11 +28,11 @@ namespace Sprint1
             
         }
 
-        public new void StartEngine()
+        public override void StartEngine()
         {
             if (isWoundUP)
             {
-                Engine.IsStarted = true;
+                base.StartEngine();
             }
             else
             {
@@ -40,20 +40,14 @@ namespace Sprint1
             }
         }
 
-        public new string TakeOff() 
+        public override string TakeOff() 
         {
             if (!isWoundUP)
             {
                 return this + " can't fly, it isn't wound up!";
             }
-            if (!Engine.IsStarted)
-            {
-                return this + " can't fly it's engine is not started.";
-            }
-            else 
-            {
-                return this + " is flying";
-            }
+
+             return base.TakeOff();
         }
 
         public ToyPlane()
