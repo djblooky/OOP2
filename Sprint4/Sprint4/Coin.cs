@@ -14,7 +14,8 @@ namespace Sprint4
 
         public virtual string About()
         {
-            throw new NotImplementedException();
+            return Name + " is from " + Year + ". It is worth $0" + MonetaryValue + ".";
+                
         }
         public Coin()
         {

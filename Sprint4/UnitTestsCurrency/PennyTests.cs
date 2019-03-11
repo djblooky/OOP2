@@ -1,7 +1,7 @@
 ﻿
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Currency.US;
+using Sprint4;
 
 namespace UnitTestsCurrency
 {
@@ -18,8 +18,8 @@ namespace UnitTestsCurrency
             p = new Penny();
             philiPenny = new Penny(USCoinMintMark.P);
             //Assert
-            //D is the default mint mark
-            //Current Year is default year
+            Assert.AreEqual(USCoinMintMark.D, p.MintMark);
+            Assert.AreEqual(2019, p.Year);
 
             Assert.AreEqual(USCoinMintMark.P, philiPenny.MintMark);
         }
@@ -43,8 +43,7 @@ namespace UnitTestsCurrency
             //Act 
             p = new Penny();
             //Assert
-            //About output "US Penny is from 2017. It is worth $0.01. It was made in Denver"
+            Assert.AreEqual("US Penny is from 2019. It is worth $0.01. It was made in Denver", p.About());
         }
     }
 }
-view rawPennyTests.cs hosted with ❤ by GitHub

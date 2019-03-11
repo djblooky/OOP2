@@ -8,11 +8,14 @@ namespace Sprint4
     {
         public Dime()
         {
-
+            MonetaryValue = 0.10;
+            Name = "US Dime";
         }
-        public Dime()
+        public Dime(USCoinMintMark MintMark)
         {
-
+            MonetaryValue = 0.10;
+            Name = "US Dime";
+            this.MintMark = MintMark;
         }
     }
 }

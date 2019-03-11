@@ -8,11 +8,14 @@ namespace Sprint4
     {
         public Quarter()
         {
-
+            MonetaryValue = 0.25;
+            Name = "US Quarter";
         }
-        public Quarter()
+        public Quarter(USCoinMintMark MintMark)
         {
-
+            MonetaryValue = 0.25;
+            Name = "US Quarter";
+            this.MintMark = MintMark;
         }
     }
 }

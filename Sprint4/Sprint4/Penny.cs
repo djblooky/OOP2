@@ -8,12 +8,15 @@ namespace Sprint4
     {
         public Penny()
         {
-
+            MonetaryValue = .01;
+            Name = "US Penny";
         }
 
-        public Penny()
+        public Penny(USCoinMintMark MintMark)
         {
-
+            MonetaryValue = .01;
+            Name = "US Penny";
+            this.MintMark = MintMark;
         }
     }
 }
