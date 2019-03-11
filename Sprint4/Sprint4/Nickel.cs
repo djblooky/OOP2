@@ -6,5 +6,14 @@ namespace Sprint4
 {
     public class Nickel : USCoin
     {
+        public Nickel()
+        {
+
+        }
+
+        public Nickel()
+        {
+
+        }
     }
 }

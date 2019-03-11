@@ -6,5 +6,6 @@ namespace Sprint4
 {
     public interface IBankNote: ICurrency
     {
+        int Year { get; }
     }
 }

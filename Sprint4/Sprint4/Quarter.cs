@@ -6,5 +6,13 @@ namespace Sprint4
 {
     public class Quarter : USCoin 
     {
+        public Quarter()
+        {
+
+        }
+        public Quarter()
+        {
+
+        }
     }
 }

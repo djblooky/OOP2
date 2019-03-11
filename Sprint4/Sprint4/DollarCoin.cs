@@ -6,5 +6,14 @@ namespace Sprint4
 {
     public class DollarCoin : USCoin
     {
+        public DollarCoin()
+        {
+
+        }
+
+        public DollarCoin()
+        {
+
+        }
     }
 }

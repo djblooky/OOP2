@@ -6,5 +6,8 @@ namespace Sprint4
 {
     public interface ICurrency
     {
+        double MonetaryValue { get; }
+        string Name { get; }
+        string About();
     }
 }

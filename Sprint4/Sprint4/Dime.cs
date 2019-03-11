@@ -6,5 +6,13 @@ namespace Sprint4
 {
     public class Dime : USCoin 
     {
+        public Dime()
+        {
+
+        }
+        public Dime()
+        {
+
+        }
     }
 }

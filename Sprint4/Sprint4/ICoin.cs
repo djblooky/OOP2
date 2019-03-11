@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Sprint4
 {
-    public interface ICoin : ICurrency
+    public interface ICoin :ICurrency
     {
-
+        int Year { get; }
     }
 }
