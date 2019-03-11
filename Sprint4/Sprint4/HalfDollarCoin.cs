@@ -6,13 +6,13 @@ namespace Sprint4
 {
     public class HalfDollarCoin : USCoin
     {
-        public DollarCoin()
+        public HalfDollarCoin()
         {
             MonetaryValue = 0.5;
             Name = "US Half Dollar Coin";
         }
 
-        public DollarCoin(USCoinMintMark MintMark)
+        public HalfDollarCoin(USCoinMintMark MintMark)
         {
             MonetaryValue = 1.00;
             Name = "US Half Dollar Coin";

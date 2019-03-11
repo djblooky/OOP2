@@ -35,6 +35,7 @@ namespace UnitTestsSprint4.USCoinMintMark
             //Arrange
             string mintNameDenver, mintNamePhili, mintNameSanFran, mintNameWestPoint;
             Sprint4.USCoinMintMark D, P, S, W;
+            p = new Penny();
 
             //Act 
             mintNameDenver = "Denver";
@@ -47,10 +48,10 @@ namespace UnitTestsSprint4.USCoinMintMark
             W = Sprint4.USCoinMintMark.W;
 
             //Assert
-            Assert.AreEqual(USCoin.GetMintNameFromMark(D), mintNameDenver);
-            Assert.AreEqual(USCoin.GetMintNameFromMark(P), mintNamePhili);
-            Assert.AreEqual(USCoin.GetMintNameFromMark(S), mintNameSanFran);
-            Assert.AreEqual(USCoin.GetMintNameFromMark(W), mintNameWestPoint);
+            Assert.AreEqual(p.GetMintNameFromMark(D), mintNameDenver);
+            Assert.AreEqual(p.GetMintNameFromMark(P), mintNamePhili);
+            Assert.AreEqual(p.GetMintNameFromMark(S), mintNameSanFran);
+            Assert.AreEqual(p.GetMintNameFromMark(W), mintNameWestPoint);
         }
 
         [TestMethod]

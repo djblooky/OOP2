@@ -10,22 +10,12 @@ namespace Sprint4
 
         public string About()
         {
-            throw new NotImplementedException();
+            return "The currency repo contains " + GetCoinCount().ToString() + " coins totaling $" + TotalValue().ToString();
         }
 
         public void AddCoin(ICoin c)
         {
             Coins.Add(c);
-        }
-
-        public ICurrencyRepo CreateChange(double Amount)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ICurrencyRepo CreateChange(double AmountTendered, double TotalCost)
-        {
-            throw new NotImplementedException();
         }
 
         public CurrencyRepo()
@@ -38,15 +28,49 @@ namespace Sprint4
             return Coins.Count;
         }
 
-        public ICurrencyRepo MakeChange(double Amount)
+        public ICurrencyRepo CreateChange(double Amount)
         {
-            throw new NotImplementedException();
+            while(TotalValue() < Amount) //while enough change hasn't been made
+            {
+                if(Amount >= 1)
+                {
+                    Coins.Add(new DollarCoin());
+                    Amount -= 1;
+                }
+                else if(Amount >= 0.5)
+                {
+                    Coins.Add(new HalfDollarCoin());
+                    Amount -= 0.5;
+                }
+                else if(Amount >= 0.25)
+                {
+                    Coins.Add(new Quarter());
+                    Amount -= 0.25;
+                }
+                else if(Amount >= 0.10)
+                {
+                    Coins.Add(new Dime());
+                    Amount -= 0.10;
+                }
+                else if(Amount >= 0.05)
+                {
+                    Coins.Add(new Nickel());
+                    Amount -= 0.05;
+                }
+                else if(Amount >= 0.01)
+                {
+                    Coins.Add(new Penny());
+                    Amount -= 0.01;
+                }
+            }
+
+            return this;
         }
 
-        public ICurrencyRepo MakeChange(double AmountTendered, double TotalCost)
+     /* public ICurrencyRepo MakeChange(double AmountTendered, double TotalCost)
         {
-            throw new NotImplementedException();
-        }
+            return MakeChange(AmountTendered) + ;
+        } */
 
         public ICoin RemoveCoin(ICoin c)
         {

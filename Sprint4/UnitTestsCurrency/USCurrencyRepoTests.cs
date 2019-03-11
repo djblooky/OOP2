@@ -8,7 +8,7 @@ namespace UnitTestsCurrency
     [TestClass]
     public class USCurrencyRepoTests
     {
-        ICurrencyRepo repo;
+        CurrencyRepo repo;
         Penny penny;
         Nickel nickel;
         Dime dime;
@@ -144,18 +144,19 @@ namespace UnitTestsCurrency
         public void MakeChangeTests()
         {
             //Arrange
-            USCurrencyRepo changeOneQuatersOnHalfDollar, changeTwoDollars, changeOneDollarOneHalfDoller,
+            CurrencyRepo changeOneQuatersOnHalfDollar, changeTwoDollars, changeOneDollarOneHalfDoller,
                changeOneDimeOnePenny, changeOneNickelOnePenny, changeFourPennies;
 
+            repo = new CurrencyRepo();
 
             //Act
-            changeTwoDollars = (USCurrencyRepo)USCurrencyRepo.CreateChange(2.0);
-            changeOneDollarOneHalfDoller = USCurrencyRepo.CreateChange(1.5);
-            changeOneQuatersOnHalfDollar = USCurrencyRepo.CreateChange(.75);
+            changeTwoDollars = (CurrencyRepo)repo.CreateChange(2.0);
+            changeOneDollarOneHalfDoller = (CurrencyRepo)repo.CreateChange(1.5);
+            changeOneQuatersOnHalfDollar = (CurrencyRepo)repo.CreateChange(.75);
 
-            changeOneDimeOnePenny = USCurrencyRepo.CreateChange(.11);
-            changeOneNickelOnePenny = USCurrencyRepo.CreateChange(.06);
-            changeFourPennies = USCurrencyRepo.CreateChange(.04);
+            changeOneDimeOnePenny = (CurrencyRepo)repo.CreateChange(.11);
+            changeOneNickelOnePenny = (CurrencyRepo)repo.CreateChange(.06);
+            changeFourPennies = (CurrencyRepo)repo.CreateChange(.04);
 
 
             //Assert

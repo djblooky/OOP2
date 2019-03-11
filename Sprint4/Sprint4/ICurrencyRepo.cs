@@ -10,8 +10,8 @@ namespace Sprint4
         string About();
         void AddCoin(ICoin c);
         int GetCoinCount();
-        ICurrencyRepo MakeChange(double Amount);
-        ICurrencyRepo MakeChange(double AmountTendered, double TotalCost);
+        ICurrencyRepo CreateChange(double Amount);
+        //ICurrencyRepo MakeChange(double AmountTendered, double TotalCost);
         ICoin RemoveCoin(ICoin c);
         double TotalValue();
     }
