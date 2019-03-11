@@ -34,7 +34,7 @@ namespace UnitTestsSprint4.USCoinMintMark
         {
             //Arrange
             string mintNameDenver, mintNamePhili, mintNameSanFran, mintNameWestPoint;
-            USCoinMintMark D, P, S, W;
+            Sprint4.USCoinMintMark D, P, S, W;
 
             //Act 
             mintNameDenver = "Denver";

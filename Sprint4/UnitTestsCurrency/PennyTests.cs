@@ -19,7 +19,7 @@ namespace UnitTestsCurrency
             philiPenny = new Penny(USCoinMintMark.P);
             //Assert
             Assert.AreEqual(USCoinMintMark.D, p.MintMark);
-            Assert.AreEqual(2019, p.Year);
+            Assert.AreEqual(System.DateTime.Now.Year, p.Year);
 
             Assert.AreEqual(USCoinMintMark.P, philiPenny.MintMark);
         }

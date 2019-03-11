@@ -13,9 +13,9 @@ namespace Sprint4
             return base.About() + " It was made in " + GetMintNameFromMark();
         }
 
-        public string GetMintNameFromMark()
+        public string GetMintNameFromMark(USCoinMintMark m)
         {
-            string mint;
+            string mint = m;
 
             switch (MintMark)
             {
@@ -30,10 +30,15 @@ namespace Sprint4
             return mint;
         }
 
+        public string GetMintNameFromMark()
+        {
+            return GetMintNameFromMark(MintMark);
+        }
+
         public USCoin()
         {
             MintMark = USCoinMintMark.D;
-            Year = 2019; //current year
+            Year = System.DateTime.Now.Year; //current year
         }
 
         public USCoin(USCoinMintMark MintMark) //overload

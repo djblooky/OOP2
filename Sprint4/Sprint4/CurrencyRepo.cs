@@ -6,7 +6,7 @@ namespace Sprint4
 {
     public class CurrencyRepo : ICurrencyRepo
     {
-        public List<ICoin> Coins { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<ICoin> Coins { get; set; }
 
         public string About()
         {
@@ -15,7 +15,7 @@ namespace Sprint4
 
         public void AddCoin(ICoin c)
         {
-            throw new NotImplementedException();
+            Coins.Add(c);
         }
 
         public ICurrencyRepo CreateChange(double Amount)
@@ -30,12 +30,12 @@ namespace Sprint4
 
         public CurrencyRepo()
         {
-
+            Coins = new List<ICoin>();
         }
 
         public int GetCoinCount()
         {
-            throw new NotImplementedException();
+            return Coins.Count;
         }
 
         public ICurrencyRepo MakeChange(double Amount)
@@ -50,12 +50,24 @@ namespace Sprint4
 
         public ICoin RemoveCoin(ICoin c)
         {
-            throw new NotImplementedException();
+            if (Coins.Contains(c))
+            {
+                Coins.Remove(c);
+            }
+
+            return c; //why does this return something?
         }
 
         public double TotalValue()
         {
-            throw new NotImplementedException();
+            double total = 0;
+
+            foreach(Coin c in Coins)
+            {
+                total += c.MonetaryValue;
+            }
+
+            return total;
         }
     }
 }

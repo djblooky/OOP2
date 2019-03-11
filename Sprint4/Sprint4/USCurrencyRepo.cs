@@ -6,5 +6,6 @@ namespace Sprint4
 {
     public class USCurrencyRepo : CurrencyRepo
     {
+
     }
 }
