@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sprint4
 {
-    enum USCoinMintMark
+    public enum USCoinMintMark
     {
         P,
         D,

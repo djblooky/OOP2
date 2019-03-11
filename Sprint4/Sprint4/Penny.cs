@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sprint4
 {
-    class Penny : USCoin
+    public class Penny : USCoin
     {
     }
 }

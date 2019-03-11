@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sprint4
 {
-    interface ICurrencyRepo
+    public interface ICurrencyRepo
     {
     }
 }
