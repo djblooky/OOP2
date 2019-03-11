@@ -165,11 +165,11 @@ namespace UnitTestsCurrency
 
             Assert.AreEqual(changeOneDollarOneHalfDoller.Coins.Count, 2);
             Assert.AreEqual(changeOneDollarOneHalfDoller.Coins[0].GetType(), new DollarCoin().GetType());
-            Assert.AreEqual(changeOneDollarOneHalfDoller.Coins[1].GetType(), new HalfDollar().GetType());
+            Assert.AreEqual(changeOneDollarOneHalfDoller.Coins[1].GetType(), new HalfDollarCoin().GetType());
 
 
             Assert.AreEqual(changeOneQuatersOnHalfDollar.Coins.Count, 2);
-            Assert.AreEqual(changeOneQuatersOnHalfDollar.Coins[0].GetType(), new HalfDollar().GetType());
+            Assert.AreEqual(changeOneQuatersOnHalfDollar.Coins[0].GetType(), new HalfDollarCoin().GetType());
             Assert.AreEqual(changeOneQuatersOnHalfDollar.Coins[1].GetType(), new Quarter().GetType());
 
             Assert.AreEqual(changeOneDimeOnePenny.Coins.Count, 2);

@@ -15,9 +15,9 @@ namespace Sprint4
 
         public string GetMintNameFromMark(USCoinMintMark m)
         {
-            string mint = m;
+            string mint;
 
-            switch (MintMark)
+            switch (m)
             {
                 case USCoinMintMark.D: mint = "Denver";
                     break;
