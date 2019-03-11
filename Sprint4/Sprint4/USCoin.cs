@@ -21,7 +21,11 @@ namespace Sprint4
             {
                 case USCoinMintMark.D: mint = "Denver";
                     break;
-                case USCoinMintMark.P: mint = "Pennsylvania";
+                case USCoinMintMark.P: mint = "Philadephia";
+                    break;
+                case USCoinMintMark.S: mint = "San Francisco";
+                    break;
+                case USCoinMintMark.W: mint = "West Point";
                     break;
                 default: mint = "Denver";
                     break;

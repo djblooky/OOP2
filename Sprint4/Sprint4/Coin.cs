@@ -14,7 +14,7 @@ namespace Sprint4
 
         public virtual string About()
         {
-            return Name + " is from " + Year + ". It is worth $0" + MonetaryValue + ".";
+            return Name + " is from " + Year + ". It is worth $" + MonetaryValue + ".";
                 
         }
         public Coin()
