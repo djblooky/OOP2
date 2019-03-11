@@ -18,6 +18,21 @@ namespace Sprint4
             throw new NotImplementedException();
         }
 
+        public ICurrencyRepo CreateChange(double Amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICurrencyRepo CreateChange(double AmountTendered, double TotalCost)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CurrencyRepo()
+        {
+
+        }
+
         public int GetCoinCount()
         {
             throw new NotImplementedException();

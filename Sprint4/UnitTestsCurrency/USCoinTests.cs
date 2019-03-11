@@ -32,7 +32,6 @@ namespace UnitTestsSprint4.USCoinMintMark
         [TestMethod]
         public void USCoinMintMark()
         {
-
             //Arrange
             string mintNameDenver, mintNamePhili, mintNameSanFran, mintNameWestPoint;
             USCoinMintMark D, P, S, W;
@@ -73,7 +72,7 @@ namespace UnitTestsSprint4.USCoinMintMark
             //Act 
 
             //Assert
-            Assert.AreEqual("US Penny is from 2017. It is worth $0.01. It was made in Denver", p.About());
+            Assert.AreEqual("US Penny is from 2019. It is worth $0.01. It was made in Denver", p.About());
         }
     }
  

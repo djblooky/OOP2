@@ -1,8 +1,7 @@
 ﻿
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Currency;
-using Currency.US;
+using Sprint4;
 
 namespace UnitTestsCurrency
 {
@@ -19,7 +18,7 @@ namespace UnitTestsCurrency
 
         public USCurrencyRepoTests()
         {
-            repo = new USCurrencyRepo();
+            repo = new CurrencyRepo();
             penny = new Penny();
             nickel = new Nickel();
             dime = new Dime();
@@ -89,7 +88,7 @@ namespace UnitTestsCurrency
             Double valueOrig, valueAfterPenny, valueAfterFiveMorePennies;
             Double valueAfterNickel, valueAfterDime, valueAfterQuarter, valueAfterDollar;
 
-            repo = new USCurrencyRepo();  //reset repo
+            repo = new CurrencyRepo();  //reset repo
 
             //add some coins
             repo.AddCoin(penny);
@@ -191,4 +190,3 @@ namespace UnitTestsCurrency
         }
     }
 }
-view rawUnitTestsCurrency.cs hosted with ❤ by GitHub
