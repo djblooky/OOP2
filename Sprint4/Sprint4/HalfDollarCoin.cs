@@ -14,7 +14,7 @@ namespace Sprint4
 
         public HalfDollarCoin(USCoinMintMark MintMark)
         {
-            MonetaryValue = 1.00;
+            MonetaryValue = 0.5;
             Name = "US Half Dollar Coin";
             this.MintMark = MintMark;
         }

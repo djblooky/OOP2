@@ -30,41 +30,48 @@ namespace Sprint4
 
         public ICurrencyRepo CreateChange(double Amount)
         {
-            while(TotalValue() < Amount) //while enough change hasn't been made
+            CurrencyRepo repo = new CurrencyRepo();
+
+            if (repo.Coins.Count > 0) //if coins isn't empty
             {
-                if(Amount >= 1)
+                repo.Coins.Clear(); //empty coins
+            }
+            
+            while(0 < Math.Round(Amount,2)) //while enough change hasn't been made
+            {
+                if(Math.Round(Amount,2) >= 1.0)
                 {
-                    Coins.Add(new DollarCoin());
-                    Amount -= 1;
+                    repo.AddCoin(new DollarCoin());
+                    Amount -= 1.0;
                 }
-                else if(Amount >= 0.5)
+                else if(Math.Round(Amount,2) >= 0.5)
                 {
-                    Coins.Add(new HalfDollarCoin());
+                    repo.AddCoin(new HalfDollarCoin());
                     Amount -= 0.5;
                 }
-                else if(Amount >= 0.25)
+                else if(Math.Round(Amount,2) >= 0.25)
                 {
-                    Coins.Add(new Quarter());
+                    repo.AddCoin(new Quarter());
                     Amount -= 0.25;
                 }
-                else if(Amount >= 0.10)
+                else if(Math.Round(Amount,2) >= 0.10)
                 {
-                    Coins.Add(new Dime());
+                    repo.AddCoin(new Dime());
                     Amount -= 0.10;
                 }
-                else if(Amount >= 0.05)
+                else if(Math.Round(Amount,2) >= 0.05)
                 {
-                    Coins.Add(new Nickel());
+                    repo.AddCoin(new Nickel());
                     Amount -= 0.05;
                 }
-                else if(Amount >= 0.01)
+                else if(Math.Round(Amount,2) >= 0.01)
                 {
-                    Coins.Add(new Penny());
+                    repo.AddCoin(new Penny());
                     Amount -= 0.01;
                 }
             }
 
-            return this;
+            return repo;
         }
 
      /* public ICurrencyRepo MakeChange(double AmountTendered, double TotalCost)
