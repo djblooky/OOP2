@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppWithObject"
         mc:Ignorable="d"
-        Title="Devil Dawgs" Height="300" Width="300">
+        Title="Welcome to Devil Dawgs" Height="300" Width="300">
     <Grid>
-        <Label>Select a menu item window to test:</Label>
-        <
+        <StackPanel>
+            <Label>Select a menu item:</Label>
+            <Button Content="Dawg" Click="Dawg_Button_Click"></Button>
+            <Button Content="Burger" Click="Burger_Button_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
