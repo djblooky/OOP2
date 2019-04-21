@@ -21,9 +21,31 @@ namespace WpfDawg.Models
             IsVegan = true;
         }
 
+        public Dawg(SerializationInfo info, StreamingContext context)
+        {
+            Name = info.GetString("Name");
+            Cost = info.GetDouble("Cost");
+            IsVegan = info.GetBoolean("IsVegan");
+        }
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            throw new NotImplementedException();
+            info.AddValue("Name", Name);
+            info.AddValue("Cost", Cost);
+            info.AddValue("IsVegan", IsVegan);
+        }
+
+        public override bool Equals(object other)
+        {
+            var toCompareWith = other as Dawg;
+            if (toCompareWith == null)
+                return false;
+            return Name == toCompareWith.Name && Cost == toCompareWith.Cost && IsVegan == toCompareWith.IsVegan;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
