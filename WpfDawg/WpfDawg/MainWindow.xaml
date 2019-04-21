@@ -8,8 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Label></Label>
-            <TextBox></TextBox>
+            <Label>Name:</Label>
+            <TextBox x:Name="txtName"></TextBox>
+            <Label>Cost:</Label>
+            <TextBox x:Name="txtCost"></TextBox>
+            <Label>Is it vegan?</Label>
+            <TextBox x:Name="txtVegan"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

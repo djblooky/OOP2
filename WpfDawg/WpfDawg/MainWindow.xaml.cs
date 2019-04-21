@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfDawg.Models;
 
 namespace WpfDawg
 {
@@ -20,9 +21,21 @@ namespace WpfDawg
     /// </summary>
     public partial class MainWindow : Window
     {
+        Dawg d;
+
         public MainWindow()
         {
             InitializeComponent();
+            d = new Dawg();
         }
+
+        public void BindDawgToUI()
+        {
+            txtName.Text = d.Name;
+            txtCost.Text = d.Cost.ToString();
+            txtVegan.Text = d.IsVegan.ToString();
+        }
+
+
     }
 }
