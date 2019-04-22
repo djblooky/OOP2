@@ -9,11 +9,11 @@
     <Grid>
         <StackPanel>
             <Label>Name:</Label>
-            <TextBox x:Name="txtName"></TextBox>
+            <TextBox x:Name="txtName" Text="{Binding Name}"></TextBox>
             <Label>Cost:</Label>
-            <TextBox x:Name="txtCost"></TextBox>
+            <TextBox x:Name="txtCost" Text="{Binding Cost}"></TextBox>
             <Label>Is it vegan?</Label>
-            <TextBox x:Name="txtVegan"></TextBox>
+            <TextBox x:Name="txtVegan" Text="{Binding IsVegan}"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

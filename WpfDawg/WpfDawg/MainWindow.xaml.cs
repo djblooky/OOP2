@@ -31,6 +31,7 @@ namespace WpfDawg
             d = new Dawg();
             vmDawg = new ViewModelDawg(d);
             //BindDawgToUI();
+            DataContext = vmDawg;
         }
 
         public void BindDawgToUI()
