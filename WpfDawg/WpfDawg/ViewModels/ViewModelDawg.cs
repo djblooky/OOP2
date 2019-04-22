@@ -1,32 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WpfDawg.Models;
+﻿using WpfDawg.Models;
 
 namespace WpfDawg.ViewModels
 {
-    class ViewModelDawg
+    public class ViewModelDawg : ViewModelBase
     {
-        Dawg Dawg;
+        Dawg Dawg;    
 
         public string Name
         {
             get { return Dawg.Name; }
-            set { Dawg.Name = value; }
+            set {
+                RaisePropertyChanged();
+                Dawg.Name = value; }
         }
 
         public double Cost
         {
             get { return Dawg.Cost; }
-            set { Dawg.Cost = value; }
+            set {
+                RaisePropertyChanged();
+                Dawg.Cost = value; }
         }
 
         public bool IsVegan
         {
             get { return Dawg.IsVegan; }
-            set { Dawg.IsVegan = value; }
+            set {
+                RaisePropertyChanged();
+                Dawg.IsVegan = value; }
         }
 
         public ViewModelDawg(Dawg Dawg)

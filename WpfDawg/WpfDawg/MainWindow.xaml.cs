@@ -42,7 +42,7 @@ namespace WpfDawg
             txtVegan.Text = d.IsVegan.ToString();
         } */
 
-        public void UserControlDawg1_Loaded(object sender, RoutedEventArgs e) //1:46:48
+        public void UserControlDawg1_Loaded(object sender, RoutedEventArgs e) 
         {
             UserControlDawg1.DataContext = vmDawg;
         }
