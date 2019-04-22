@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <StackPanel>
+            <Label>Name:</Label>
+            <TextBox x:Name="txtName" Text="{Binding Name}"></TextBox>
+            <Label>Cost:</Label>
+            <TextBox x:Name="txtCost" Text="{Binding Cost}"></TextBox>
+            <Label>Is it vegan?</Label>
+            <TextBox x:Name="txtVegan" Text="{Binding IsVegan}"></TextBox>
+            <Slider Value="{Binding Text, ElementName=txtCost}"></Slider>
+        </StackPanel>
     </Grid>
 </UserControl>

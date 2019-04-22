@@ -4,16 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfDawg"
+        xmlns:Views="clr-namespace:WpfDawg.Views"
         mc:Ignorable="d"
         Title="Devil Dawgs" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Label>Name:</Label>
-            <TextBox x:Name="txtName" Text="{Binding Name}"></TextBox>
-            <Label>Cost:</Label>
-            <TextBox x:Name="txtCost" Text="{Binding Cost}"></TextBox>
-            <Label>Is it vegan?</Label>
-            <TextBox x:Name="txtVegan" Text="{Binding IsVegan}"></TextBox>
-        </StackPanel>
+        <Views:UserControlDawg x:Name="UserControlDawg1" Loaded="UserControlDawg1_Loaded"></Views:UserControlDawg>
     </Grid>
 </Window>

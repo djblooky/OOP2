@@ -31,16 +31,20 @@ namespace WpfDawg
             d = new Dawg();
             vmDawg = new ViewModelDawg(d);
             //BindDawgToUI();
-            DataContext = vmDawg;
+            //DataContext = vmDawg;
         }
 
+        /*
         public void BindDawgToUI()
         {
             txtName.Text = d.Name;
             txtCost.Text = d.Cost.ToString();
             txtVegan.Text = d.IsVegan.ToString();
+        } */
+
+        public void UserControlDawg1_Loaded(object sender, RoutedEventArgs e) //1:46:48
+        {
+            UserControlDawg1.DataContext = vmDawg;
         }
-
-
     }
 }
