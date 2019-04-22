@@ -10,9 +10,9 @@ namespace WpfDawg.Models
     [Serializable]
     public class Dawg : ISerializable
     {
-        public string Name { get; protected set; }
-        public double Cost { get; protected set; }
-        public bool IsVegan { get; protected set; }
+        public string Name { get; set; }
+        public double Cost { get; set; }
+        public bool IsVegan { get; set; }
 
         public Dawg()
         {

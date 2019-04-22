@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfDawg.Models;
+using WpfDawg.ViewModels;
 
 namespace WpfDawg
 {
@@ -21,12 +22,15 @@ namespace WpfDawg
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModelDawg vmDawg;
         Dawg d;
 
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();        
             d = new Dawg();
+            vmDawg = new ViewModelDawg(d);
+            //BindDawgToUI();
         }
 
         public void BindDawgToUI()
