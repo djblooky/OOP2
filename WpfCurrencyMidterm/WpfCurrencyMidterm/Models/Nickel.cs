@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sprint4
+namespace WpfCurrencyMidterm.Models
 {
     public class Nickel : USCoin
     {

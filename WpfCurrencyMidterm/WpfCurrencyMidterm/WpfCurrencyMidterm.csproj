@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\CurrencyRepoViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,7 +81,6 @@
     <Compile Include="Models\ICurrencyRepo.cs" />
     <Compile Include="Models\Nickel.cs" />
     <Compile Include="Models\Penny.cs" />
-    <Compile Include="Models\Program.cs" />
     <Compile Include="Models\Quarter.cs" />
     <Compile Include="Models\USCoin.cs" />
     <Compile Include="Models\USCoinMintMark.cs" />
@@ -110,7 +110,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

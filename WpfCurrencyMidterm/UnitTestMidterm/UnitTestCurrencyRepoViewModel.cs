@@ -1,18 +1,15 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WpfAppCurrency.ViewModels;
-using Currency;
-using Currency.US;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.ObjectModel;
+using WpfCurrencyMidterm.ViewModels;
 
-namespace UnitTestWpfAppCurrency
+namespace WpfCurrencyMidterm
 {
     [TestClass]
     public class UnitTestCurrencyRepoViewModel
     {
 
         ICurrencyRepo repo;
-        CurrenyRepoViewModel vm;
+        CurrencyRepoViewModel vm;
 
         public UnitTestCurrencyRepoViewModel()
         {
@@ -23,15 +20,15 @@ namespace UnitTestWpfAppCurrency
         public void Coins_For_ComboBoxCoins_Collections_AreSame() 
         {
             //Arrange
-            repo = new USCurrencyRepo();
-            vm = new CurrenyRepoViewModel(repo);
+            repo = new CurrencyRepo();
+            vm = new CurrencyRepoViewModel(repo);
 
             ObservableCollection<ICoin> testCoinsforcdCoins;
 
             //Act
             testCoinsforcdCoins = vm.CoinsforcdCoins;
             //Assert
-            CollectionAssert.AreEqual(((USCurrencyRepo)repo).CurrencyList, testCoinsforcdCoins);
+            CollectionAssert.AreEqual(((CurrencyRepo)repo).CurrencyList, testCoinsforcdCoins);
 
         }
 
