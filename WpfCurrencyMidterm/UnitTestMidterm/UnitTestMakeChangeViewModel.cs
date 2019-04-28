@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using WpfAppCurrency.ViewModels;
+using WpfCurrencyMidterm.ViewModels;
+using WpfCurrencyMidterm.Models;
 using System.ComponentModel;
-using Currency.US;
 
-namespace UnitTestWpfAppCurrency
+namespace WpfCurrencyMidterm
 {
     [TestClass]
     public class UnitTestMakeChangeViewModel
@@ -15,7 +15,7 @@ namespace UnitTestWpfAppCurrency
 
         public UnitTestMakeChangeViewModel()
         {
-            vm = new MakeChangeViewModel(new Currency.US.USCurrencyRepo());
+            vm = new MakeChangeViewModel(new CurrencyRepo());
         }
 
         [TestMethod]

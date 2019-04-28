@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.ObjectModel;
 using WpfCurrencyMidterm.ViewModels;
+using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm
 {

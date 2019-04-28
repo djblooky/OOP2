@@ -1,21 +1,18 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using Currency;
 using System.Collections.Generic;
-using Currency.US;
+using WpfCurrencyMidterm.Models;
 
-namespace UnitTestWpfAppCurrency
+namespace WpfCurrencyMidterm
 {
     [TestClass]
     public class UnitTestSaveableCurrencyRepo
     {
-
-        SaveableCurrenyRepo repo;
+        SaveableCurrencyRepo repo;
 
         public UnitTestSaveableCurrencyRepo()
         {
-            repo = new SaveableCurrenyRepo(
+            repo = new SaveableCurrencyRepo(
                 new List<ICoin>()
                 {
                     new Penny(),

@@ -7,12 +7,11 @@ using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm.ViewModels
 {
-    public class CurrencyRepoViewModel
+    public class MakeChangeViewModel
     {
-        public CurrencyRepoViewModel(ICurrencyRepo repo)
+        public MakeChangeViewModel(CurrencyRepo repo)
         {
 
         }
-
     }
 }
