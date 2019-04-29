@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Documents;
 using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm
@@ -10,13 +10,11 @@ namespace WpfCurrencyMidterm
     /// </summary>
     public partial class MainWindow : Window
     {
-
         private static CurrencyRepo repo;
         public static CurrencyRepo Repo
         {
             get
             {
-
                 return repo;
             }
             set { repo = value; }
@@ -25,10 +23,8 @@ namespace WpfCurrencyMidterm
         public MainWindow()
         {
             InitializeComponent();
-            repo = new CurrencyRepo() { Coins = new List& lt; ICoins & gt; () { new Penny() }
-        };
-
-    }
+            repo = new CurrencyRepo() { Coins = new List<ICoin> { new Penny() } };
+        }
 
     private void ButtonRepo_Click(object sender, RoutedEventArgs e)
     {
@@ -41,7 +37,9 @@ namespace WpfCurrencyMidterm
         WindowMakeChange window = new WindowMakeChange(repo);
         window.Show();
     }
-
-
 }
 }
+
+
+
+

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="ButtonMakeChange" Click="ButtonMakeChange_Click">Make Change</Button>
+        <Button x:Name="ButtonCurrencyRepo" Click="ButtonRepo_Click">Currency Repo</Button>
     </Grid>
 </Window>
