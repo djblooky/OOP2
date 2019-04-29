@@ -15,7 +15,7 @@
                 <Button >Make Change</Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ListView x:Name="lvCoins" ItemsSource="{Binding Coins, StringFormat='Test'}" />
+                <ListView x:Name="OCoins" ItemsSource="{Binding Coins, StringFormat='Test'}" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button >Save</Button>
