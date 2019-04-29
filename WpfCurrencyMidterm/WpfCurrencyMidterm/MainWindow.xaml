@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCurrencyMidterm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="300" Width="300">
+    <Grid Margin="50,150,50,50">
         <Button x:Name="ButtonMakeChange" Click="ButtonMakeChange_Click">Make Change</Button>
-        <Button x:Name="ButtonCurrencyRepo" Click="ButtonRepo_Click">Currency Repo</Button>
+        <Button x:Name="ButtonCurrencyRepo" Click="ButtonRepo_Click" Margin="0,-150,0,150">Currency Repo</Button>
     </Grid>
 </Window>
