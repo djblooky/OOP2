@@ -9,7 +9,7 @@ namespace WpfCurrencyMidterm.ViewModels
 {
     public class MakeChangeViewModel : BaseViewModel
     {
-        public MakeChangeViewModel(CurrencyRepo repo)
+        public MakeChangeViewModel(ICurrencyRepo repo)
         {
 
         }
