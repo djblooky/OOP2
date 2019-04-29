@@ -11,11 +11,12 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label>Amount:</Label>
-                <TextBox Text="0.0"></TextBox>
-                <Button >Make Change</Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ListView x:Name="OCoins" ItemsSource="{Binding Coins, StringFormat='Test'}" />
+                <TextBox Text="0.0"></TextBox>
+                <Button >Make Change</Button>
+                <!-- this listview working?? -->
+                <ListView x:Name="OCoins" ItemsSource="{Binding Coins, StringFormat='Test'}" Width="50" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button >Save</Button>
