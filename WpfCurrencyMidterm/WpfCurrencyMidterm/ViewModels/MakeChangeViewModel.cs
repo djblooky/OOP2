@@ -1,74 +1,77 @@
-﻿using WpfCurrencyMidterm.Models;
+﻿using System.Collections.ObjectModel;
+using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm.ViewModels
 {
     public class MakeChangeViewModel : BaseViewModel
     {
         private ICurrencyRepo repo;
-        private double amount = 0;
-        public BasicCommand basicCommand { get; private set; }
+        private double amount;
+        public BasicCommand BasicCmd { get; private set; }
         private SaveableCurrencyRepo saveRepo;
-        private ObservableCollection<ICoin> vmCoins = new ObservableCollection<ICoin>();
+        public ObservableCollection<ICoin> OCoins = new ObservableCollection<ICoin>();
+        public int RepoTotal;
 
 
         public MakeChangeViewModel(ICurrencyRepo repo)
         {
             this.repo = repo;
+            RepoTotal = 0;
+            amount = 0;
         }
 
         public ObservableCollection<ICoin> VMCoins
         {
-            get { return vmCoins; }
-            set { vmCoins = value; RaisedPropertyChanged("VMCoins"); }
+            get { return OCoins; }
+            set { OCoins = value; RaisePropertyChangedEvent("VMCoins"); }
         }
 
         public BasicCommand SaveCoin
         {
             get
             {
-                basicCommand = new BasicCommand(saveCoin);
-                return basicCommand;
+                BasicCmd = new BasicCommand(saveCoin);
+                return BasicCmd;
             }
         }
 
         public void saveCoin()
         {
-            saveRepo = new SaveableCurrencyRepo(this.repo.Coins);
-            this.saveRepo.Save();
+            saveRepo = new SaveableCurrencyRepo(repo.Coins);
+            saveRepo.Save();
         }
 
         public BasicCommand Ocoin
         {
             get
             {
-                if (basicCommand == null)
+                if (BasicCmd == null)
                 {
-                    basicCommand = new BasicCommand(OCoin);
+                    BasicCmd = new BasicCommand(OCoin);
                 }
-                return basicCommand;
+                return BasicCmd;
             }
         }
 
         private void OCoin()
         {
-            this.repo = this.repo.MakeChange(Amount);
-            for (int i = 0; i < this.repo.GetCoinCount(); i++)
+            repo = repo.CreateChange(Amount);
+            for (int i = 0; i < repo.GetCoinCount(); i++)
             {
-                vmCoins.Add(this.repo.Coins[i]);
+                OCoins.Add(repo.Coins[i]);
             }
         }
 
-        //This will represent the value the user input into the textbox
         public double Amount
         {
             get
             {
-                return this.amount;
+                return amount;
             }
             set
             {
-                RaisedPropertyChanged("Amount");
-                this.amount = value;
+                RaisePropertyChangedEvent("Amount");
+                amount = value;
             }
         }
     }
