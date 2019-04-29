@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WpfCurrencyMidterm.Models;
+﻿using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm.ViewModels
 {
-    public class CurrencyRepoViewModel
+    public class CurrencyRepoViewModel : BaseViewModel
     {
         public CurrencyRepoViewModel(ICurrencyRepo repo)
         {

@@ -7,7 +7,7 @@ using WpfCurrencyMidterm.Models;
 
 namespace WpfCurrencyMidterm.ViewModels
 {
-    public class MakeChangeViewModel
+    public class MakeChangeViewModel : BaseViewModel
     {
         public MakeChangeViewModel(CurrencyRepo repo)
         {
