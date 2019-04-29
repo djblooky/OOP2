@@ -8,6 +8,6 @@
         Title="MainWindow" Height="300" Width="300">
     <Grid Margin="50,150,50,50">
         <Button x:Name="ButtonMakeChange" Click="ButtonMakeChange_Click">Make Change</Button>
-        <Button x:Name="ButtonCurrencyRepo" Click="ButtonRepo_Click" Margin="0,-150,0,150">Currency Repo</Button>
+        <Button x:Name="ButtonCurrencyRepo" Click="ButtonRepo_Click" Margin="0,-100,0,100">Currency Repo</Button>
     </Grid>
 </Window>
