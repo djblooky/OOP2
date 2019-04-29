@@ -5,13 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfCurrencyMidterm.Models;
+using WpfCurrencyMidterm.ViewModels;
 
 namespace WpfCurrencyMidterm.Views
 {
@@ -23,6 +18,7 @@ namespace WpfCurrencyMidterm.Views
         public UserControlMakeChangeTest()
         {
             InitializeComponent();
+            DataContext = new MakeChangeViewModel(new CurrencyRepo());
         }
     }
 }
