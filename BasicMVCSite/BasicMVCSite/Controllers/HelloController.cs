@@ -8,6 +8,19 @@ namespace BasicMVCSite.Controllers
 {
     public class HelloController : Controller
     {
+        
+        public IActionResult Index(string Name)
+        {
+            ViewData["Message"] = $"yee haw {Name} from MVC";
+            ViewBag.Name = Name;
+
+           // dynamic seven = 7;
+           // string strSeven = seven;
+
+            return View();
+        }
+
+        /*
         public string Index()
         {
             return this.Hello("Haley");
@@ -21,6 +34,6 @@ namespace BasicMVCSite.Controllers
         public string Goodbye()
         {
             return "Bye!";
-        }
+        }*/
     }
 }
