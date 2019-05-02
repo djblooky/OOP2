@@ -10,7 +10,7 @@ namespace Sprint2
     {
         public string Sound { get; protected set; }
         public string Material { get; protected set; }
-        public int Cost { get; protected set; }
+        public double Cost { get; protected set; }
         public bool IsPlaying { get; set; }
         public int SoundCount { get; protected set; }
 

@@ -12,6 +12,9 @@ namespace Sprint2
         {
             Sound = "Strum";
             NumberOfStrings = 6;
+            SoundCount = 0;
+            Cost = 199.99;
+            IsPlaying = false;
         }
     }
 }

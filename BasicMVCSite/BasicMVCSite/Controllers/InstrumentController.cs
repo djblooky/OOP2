@@ -1,18 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Sprint2;
 
 namespace BasicMVCSite.Controllers
 {
     public class InstrumentController : Controller
     {
+        Instrument Instrument;
+
+        public InstrumentController()
+        {
+            Instrument = new Guitar();
+        }
+
         // GET: Instrument
         public ActionResult Index()
         {
-            return View();
+            return View(Instrument);
         }
 
         // GET: Instrument/Details/5
