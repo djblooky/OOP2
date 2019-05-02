@@ -2,22 +2,27 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sprint2;
+using System.Collections.Generic;
 
 namespace BasicMVCSite.Controllers
 {
     public class InstrumentController : Controller
     {
-        Instrument Instrument;
+        List<Instrument> Instruments;
 
         public InstrumentController()
         {
-            Instrument = new Guitar();
+            Instruments = new List<Instrument>() //50:07
+            {
+                new Guitar(),
+                new Trumpet()
+            };
         }
 
         // GET: Instrument
         public ActionResult Index()
         {
-            return View(Instrument);
+            return View(Instruments);
         }
 
         // GET: Instrument/Details/5
