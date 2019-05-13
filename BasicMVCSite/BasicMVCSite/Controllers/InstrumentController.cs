@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sprint2;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BasicMVCSite.Controllers
 {
@@ -26,9 +27,9 @@ namespace BasicMVCSite.Controllers
         }
 
         // GET: Instrument/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string Sound)
         {
-            return View();
+            return View(Instruments.Where(s=>s.Sound==Sound).FirstOrDefault());
         }
 
         // GET: Instrument/Create
@@ -57,7 +58,7 @@ namespace BasicMVCSite.Controllers
         // GET: Instrument/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(Instruments[id]);
         }
 
         // POST: Instrument/Edit/5

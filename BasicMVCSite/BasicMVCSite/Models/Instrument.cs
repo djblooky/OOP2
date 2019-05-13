@@ -8,11 +8,11 @@ namespace Sprint2
 {
     public abstract class Instrument
     {
-        public string Sound { get; protected set; }
-        public string Material { get; protected set; }
-        public double Cost { get; protected set; }
+        public string Sound { get; set; }
+        public string Material { get; set; }
+        public double Cost { get; set; }
         public bool IsPlaying { get; set; }
-        public int SoundCount { get; protected set; }
+        public int SoundCount { get; set; }
 
         public char soundSplit = ',';
 
