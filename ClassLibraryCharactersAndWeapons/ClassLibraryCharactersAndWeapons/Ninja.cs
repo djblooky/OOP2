@@ -7,5 +7,9 @@ namespace ClassLibraryCharactersAndWeapons
 {
     public class Ninja : Character
     {
+        public Ninja(IWeapon weapon) : base(weapon)
+        {
+
+        }
     }
 }
