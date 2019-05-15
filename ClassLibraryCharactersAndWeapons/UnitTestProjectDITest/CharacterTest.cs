@@ -68,6 +68,23 @@ namespace UnitTestProjectDITest
         }
 
         [TestMethod]
+        public void SpaceMarineInject()
+        {
+            //arrange
+            Character c;
+            string attackTarget = "bad guy";
+
+            //act
+            c = k.Get<SpaceMarine>();
+
+            //assert
+            Assert.IsInstanceOfType(c, typeof(Character));
+            Assert.IsInstanceOfType(c, typeof(SpaceMarine));
+            Assert.IsInstanceOfType(c.Weapon, typeof(BFG));
+            Assert.AreEqual(c.Attack(attackTarget), $"{c.Weapon.Name} hits {attackTarget}");
+        }
+
+        [TestMethod]
         public void SamuraiNoInject()
         {
             //arrange
