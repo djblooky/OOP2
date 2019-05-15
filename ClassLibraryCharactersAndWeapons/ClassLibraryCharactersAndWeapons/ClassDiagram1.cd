@@ -3,10 +3,45 @@
   <Class Name="ClassLibraryCharactersAndWeapons.Weapon">
     <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Weapon.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibraryCharactersAndWeapons.Katana">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Katana.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryCharactersAndWeapons.Sword">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryCharactersAndWeapons.Character">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACIAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryCharactersAndWeapons.Samurai">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Samurai.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibraryCharactersAndWeapons.Ninja">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ninja.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="ClassLibraryCharactersAndWeapons.IWeapon">
     <Position X="4.25" Y="1.5" Width="1.5" />
