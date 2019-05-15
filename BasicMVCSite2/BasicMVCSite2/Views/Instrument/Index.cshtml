@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Sprint2.Instrument>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sound)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Material)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsPlaying)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SoundCount)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sound)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPlaying)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoundCount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Sound = item.Sound }) |
+                @Html.ActionLink("Details", "Details", new { Sound = item.Sound }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

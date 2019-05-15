@@ -23,7 +23,7 @@ namespace UnitTestProjectDITest
             Assert.IsInstanceOfType(c, typeof(Character));
             Assert.IsInstanceOfType(c, typeof(Samurai));
             Assert.IsInstanceOfType(c.Weapon, typeof(Katana));
-            Assert.AreEqual(c.Attack(attackTarget), $"{c.Weapon.Name} hits {attackTarget}")
+            Assert.AreEqual(c.Attack(attackTarget), $"{c.Weapon.Name} hits {attackTarget}");
         }
     }
 }
