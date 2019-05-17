@@ -10,7 +10,6 @@ namespace ClassLibraryFinal
     /// </summary>
     public class DefaultShippingService : IShippingService
     {
-
         public IShippingLocation ShippingLocation { get; protected set; }
 
         public uint ShippingDistance
@@ -35,7 +34,7 @@ namespace ClassLibraryFinal
 
         public IDeliveryService DeliveryService { get; set; }
 
-        List<IProduct> Products { get; set; }
+        public List<IProduct> Products { get; set; }
 
 
         /// <summary>

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryFinal.ShippingServices
 {
-    public class CarrierPigeonService : DeliveryService
+    public class CarrierPigeonService : DefaultShippingService
     {
-        public CarrierPigeonService(IShippingVehicle vehicle) : base(vehicle)
+        public CarrierPigeonService(IDeliveryService Service, List<IProduct> Products, IShippingLocation Location) : base(Service, Products, Location)
         {
-            costPerRefuel = 5;
+            
         }
     }
 }

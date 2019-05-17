@@ -2,6 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibraryFinal;
 using ClassLibraryFinal.Vehicles;
+using Moq;
+using System.Collections.Generic;
 
 namespace UnitTestFinal
 {
@@ -65,18 +67,37 @@ namespace UnitTestFinal
         }
 
         [TestMethod]
-        public void DeliveryService_CarrierPigeonServiceDefaults()
+        public void MockTest()
         {
             //Arrange
-            double costPerRefuel = 5;
-            vehicle = new CarrierPigeon();
-            delivery = new SnailService(vehicle);
+            DefaultShippingService defaultService;
+
+            var mockDeliveryService = new Mock<IDeliveryService>();
+            var mockProduct = new Mock<IProduct>();
+            var mockShippingLocation = new Mock<IShippingLocation>();
+
             //Act
+            mockDeliveryService.Setup(dS => dS.CostPerRefuel).Equals(5);
+            mockDeliveryService.Setup(dS => dS.ShippingVehicle).Equals(new CarrierPigeon());
+
+            mockShippingLocation.Setup(sL => sL.StartZipCode).Equals("101011");
+            mockShippingLocation.Setup(sL => sL.DestinationZipCode).Equals("7088");
+
+            mockProduct.Setup(p => p.Name).Equals("Rubik's Cube");
+            mockProduct.Setup(p => p.ShippingWeight).Equals(2);
+            mockProduct.Setup(p => p.ShortDescription).Equals("A puzzle (in cube form)!");
+
+            List<IProduct> products = new List<IProduct>();
+            products.Add(mockProduct.Object);
+
+            defaultService = new DefaultShippingService(mockDeliveryService.Object, products, mockShippingLocation.Object);
+            double cost;
+            cost = defaultService.ShippingCost();
 
             //Assert
-            Assert.IsNotNull(delivery);
-            Assert.IsNotNull(delivery.ShippingVehicle);
-            Assert.AreEqual(delivery.CostPerRefuel, costPerRefuel);
+            Assert.IsInstanceOfType(defaultService.DeliveryService, typeof(IDeliveryService));
+            Assert.IsInstanceOfType(defaultService.ShippingLocation, typeof(IShippingLocation));
+            Assert.IsInstanceOfType(defaultService.Products, typeof(List<IProduct>));
         }
 
     }
