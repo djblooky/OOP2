@@ -9,7 +9,9 @@ namespace ClassLibraryFinal
     {
         public Truck()
         {
-            
+            MaxDistancePerRefuel = 200;
+            MaxWeight = 1000;
+            TopSpeed = 65;
         }
     }
 }
