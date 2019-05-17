@@ -127,9 +127,25 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MakeChangeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Coin.cs" />
+    <Compile Include="Models\CurrencyRepo.cs" />
+    <Compile Include="Models\Dime.cs" />
+    <Compile Include="Models\DollarCoin.cs" />
+    <Compile Include="Models\HalfDollarCoin.cs" />
+    <Compile Include="Models\IBankNote.cs" />
+    <Compile Include="Models\ICoin.cs" />
+    <Compile Include="Models\ICurrency.cs" />
+    <Compile Include="Models\ICurrencyRepo.cs" />
+    <Compile Include="Models\Nickel.cs" />
+    <Compile Include="Models\Penny.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\Quarter.cs" />
+    <Compile Include="Models\USCoin.cs" />
+    <Compile Include="Models\USCoinMintMark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +187,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\MakeChange\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
