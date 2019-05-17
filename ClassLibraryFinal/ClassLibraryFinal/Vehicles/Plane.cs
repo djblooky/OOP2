@@ -9,7 +9,9 @@ namespace ClassLibraryFinal
     {
         public Plane()
         {
-            
+            MaxDistancePerRefuel = 5000;
+            MaxWeight = 1000;
+            TopSpeed = 200;
         }
     }
 }
