@@ -1,4 +1,5 @@
-﻿using FinalPart3MVC.ViewModels;
+﻿using ClassLibraryFinal;
+using FinalPart3MVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,12 +41,33 @@ namespace FinalPart3MVC.Controllers
             try
             {
                 // TODO: Add insert logic here
-                string s = "call calculate shipping here!";
+                /*string s = "call calculate shipping here!";
                 double cost = 7;
                 viewModel.ShippingCost = cost;
-                viewModel.ShippingMessage = s;
+                viewModel.ShippingMessage = s;*/
 
-                return View(viewModel);
+                DeliveryService service;
+                uint numRefuels;
+                uint shippingDistance;
+
+                if (collection["ShippingMethods"].ToString() == "Snail Service")
+                {
+                    service = new SnailService((IShippingVehicle)(new Snail()));
+                }
+                else if (collection["ShippingMethods"].ToString() == "Uncle's Truck")
+                {
+                    service = new UnclesTruck((new Truck()));
+                }
+                else if (collection["ShippingMethods"].ToString() == "Air Express")
+                {
+                    service = new AirExpress((new Plane()));
+                }
+
+                //viewModel.ShippingZipCode = service.ShippingVehicle.ZipCode;
+                viewModel.ShippingDistance = service.ShippingVehicle.MaxDistancePerRefuel;
+                viewModel.CostRefills = service.CostPerRefuel;
+
+                    return View(viewModel);
             }
             catch
             {
