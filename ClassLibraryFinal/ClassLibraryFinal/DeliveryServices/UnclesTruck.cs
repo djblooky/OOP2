@@ -9,7 +9,7 @@ namespace ClassLibraryFinal
     {
         public UnclesTruck(IShippingVehicle vehicle) : base(vehicle)
         {
-           
+            costPerRefuel = 200;
         }
     }
 }

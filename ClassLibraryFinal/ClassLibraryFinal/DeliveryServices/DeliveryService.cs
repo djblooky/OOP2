@@ -10,17 +10,21 @@ namespace ClassLibraryFinal
 
         protected double costPerRefuel;
 
-        public double CostPerRefuel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public double CostPerRefuel {
+            get { return costPerRefuel; }
+            set { costPerRefuel = value; }
+        }
 
-
-        public IShippingVehicle ShippingVehicle { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
+        public IShippingVehicle ShippingVehicle {
+            get { return shippingVehicle; }
+            set { shippingVehicle = value; }
+        }
 
         protected IShippingVehicle shippingVehicle;
 
         public DeliveryService(IShippingVehicle vehicle)
         {
-            
+            shippingVehicle = vehicle;
         }
 
     }
