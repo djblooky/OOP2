@@ -9,7 +9,7 @@ namespace WpfCurrencyMidterm.ViewModels
         private double amount;
         public BasicCommand BasicCmd { get; private set; }
         private SaveableCurrencyRepo saveRepo;
-        public ObservableCollection<ICoin> OCoins = new ObservableCollection<ICoin>();
+        public ObservableCollection<ICoin> OCoins;
         public int RepoTotal;
 
 
@@ -18,6 +18,7 @@ namespace WpfCurrencyMidterm.ViewModels
             this.repo = repo;
             RepoTotal = 0;
             amount = 0;
+            OCoins = new ObservableCollection<ICoin>();
         }
 
         public ObservableCollection<ICoin> VMCoins

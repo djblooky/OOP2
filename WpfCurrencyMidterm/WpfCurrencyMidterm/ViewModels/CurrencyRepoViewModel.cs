@@ -47,7 +47,14 @@ namespace WpfCurrencyMidterm.ViewModels
 
         public void newRepo()
         {
-            repo.Coins = new List<ICoin>();
+            repo.Coins = new List<ICoin>
+            {
+                new Penny(),
+                new Dime(),
+                new Quarter(),
+                new Nickel(),
+                new HalfDollarCoin()
+            };
             RaisePropertyChangedEvent("RepoTotal");
         }
 

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace WpfCurrencyMidterm.Models
 {
+    [Serializable]
     public abstract class Coin : ICoin
     {
         public int Year { get; set; }

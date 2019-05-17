@@ -4,6 +4,7 @@ using System.Text;
 
 namespace WpfCurrencyMidterm.Models
 {
+    [Serializable]
     public abstract class USCoin : Coin
     {
         public USCoinMintMark MintMark;
