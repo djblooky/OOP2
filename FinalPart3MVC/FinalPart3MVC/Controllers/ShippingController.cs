@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalPart3MVC.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace FinalPart3MVC.Controllers
 {
     public class ShippingController : Controller
     {
+        ShippingControllerViewModel viewModel;
+
+        public ShippingController()
+        {
+            viewModel = new ShippingControllerViewModel();
+        }
+
         // GET: Shipping
         public ActionResult Index()
         {
-            return View();
+            return View(viewModel);
         }
 
         // GET: Shipping/Details/5
@@ -32,8 +40,12 @@ namespace FinalPart3MVC.Controllers
             try
             {
                 // TODO: Add insert logic here
+                string s = "call calculate shipping here!";
+                double cost = 7;
+                viewModel.ShippingCost = cost;
+                viewModel.ShippingMessage = s;
 
-                return RedirectToAction("Index");
+                return View(viewModel);
             }
             catch
             {

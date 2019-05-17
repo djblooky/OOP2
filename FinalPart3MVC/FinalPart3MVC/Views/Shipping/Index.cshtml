@@ -6,13 +6,15 @@
 
 <h2>Index</h2>
 
+@Model.Test
+
 @using (Html.BeginForm("CalculateShipping", "Shipping", FormMethod.Post))
 {
     @Html.Label("Zipcode:")
     @Html.TextBox("FromZip", null, new {@class="form-control"})
     @Html.Label("Shipping Method")
     @Html.DropDownList("ShippingMethods",
-    new SelectList(new string[] {"one","two"}),
+    new SelectList(Model.ShippingDDLNames),
     new { @class = "form-control" })
 
     <input class="btn btn-default" type="submit" value="Calculate Shipping"/>

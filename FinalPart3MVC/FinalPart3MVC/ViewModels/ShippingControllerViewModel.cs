@@ -9,6 +9,8 @@ namespace FinalPart3MVC.ViewModels
     {
         public string Test { get; set; }
         public List<string> ShippingDDLNames { get; set; }
+        public double ShippingCost { get; set; }
+        public string ShippingMessage { get; set; }
 
         public ShippingControllerViewModel()
         {
