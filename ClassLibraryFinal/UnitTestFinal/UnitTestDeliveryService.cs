@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClassLibraryFinal;
+using ClassLibraryFinal.Vehicles;
 
 namespace UnitTestFinal
 {
@@ -62,5 +63,21 @@ namespace UnitTestFinal
             Assert.IsNotNull(delivery.ShippingVehicle);
             Assert.AreEqual(delivery.CostPerRefuel, costPerRefuel);
         }
+
+        [TestMethod]
+        public void DeliveryService_CarrierPigeonServiceDefaults()
+        {
+            //Arrange
+            double costPerRefuel = 5;
+            vehicle = new CarrierPigeon();
+            delivery = new SnailService(vehicle);
+            //Act
+
+            //Assert
+            Assert.IsNotNull(delivery);
+            Assert.IsNotNull(delivery.ShippingVehicle);
+            Assert.AreEqual(delivery.CostPerRefuel, costPerRefuel);
+        }
+
     }
 }

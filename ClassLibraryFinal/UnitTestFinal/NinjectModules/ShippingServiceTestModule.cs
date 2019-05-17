@@ -37,7 +37,10 @@ namespace UnitTestFinal.NinjectModules
 
     class FakeProductList : List<IProduct>
     {
-
+        public FakeProductList()
+        { 
+            Add(new Mock<IProduct>().Object); //need to capture instance from constructor
+        }
     }
 
     class FakeShippingLocation : IShippingLocation
