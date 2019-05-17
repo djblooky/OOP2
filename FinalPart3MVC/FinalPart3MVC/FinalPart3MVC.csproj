@@ -130,6 +130,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AirExpress.cs" />
+    <Compile Include="Models\CarrierPigeon.cs" />
+    <Compile Include="Models\CarrierPigeonService.cs" />
+    <Compile Include="Models\DefaultShippingService.cs" />
+    <Compile Include="Models\DeliveryService.cs" />
+    <Compile Include="Models\IDeliveryService.cs" />
+    <Compile Include="Models\IMotorVehicle.cs" />
+    <Compile Include="Models\IProduct.cs" />
+    <Compile Include="Models\IShippingLocation.cs" />
+    <Compile Include="Models\IShippingService.cs" />
+    <Compile Include="Models\IShippingVehicle.cs" />
+    <Compile Include="Models\MotorVehicle.cs" />
+    <Compile Include="Models\Plane.cs" />
+    <Compile Include="Models\ShippingServiceProvider.cs" />
+    <Compile Include="Models\ShippingSnail.cs" />
+    <Compile Include="Models\Snail.cs" />
+    <Compile Include="Models\SnailService.cs" />
+    <Compile Include="Models\Truck.cs" />
+    <Compile Include="Models\UnclesTruck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
