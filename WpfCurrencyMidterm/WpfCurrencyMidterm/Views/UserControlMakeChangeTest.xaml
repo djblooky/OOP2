@@ -15,7 +15,7 @@
                 <TextBox Text="0.0"></TextBox>
                 <Button >Make Change</Button>
                 <!-- this listview working?? -->
-                <ListView x:Name="OCoins" ItemsSource="{Binding Coins, StringFormat='Test'}" Width="50" />
+                <ListView x:Name="Coins" ItemsSource="{Binding OCoins, StringFormat='Test'}" Width="50" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button >Save</Button>
