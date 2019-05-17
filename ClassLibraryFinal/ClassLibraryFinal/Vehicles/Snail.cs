@@ -5,15 +5,14 @@ using System.Text;
 
 namespace ClassLibraryFinal
 {
-    public class Snail
+    public class Snail 
     {
+        public uint Speed { get; set; }
 
         public Snail()
         {
-            this.Speed = 1;
-        }
-
-        public uint Speed { get; set; }
-        
+            Speed = 1;
+          
+        } 
     }   
 }

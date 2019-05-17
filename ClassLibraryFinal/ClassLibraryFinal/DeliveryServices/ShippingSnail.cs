@@ -7,14 +7,16 @@ namespace ClassLibraryFinal
 {
     public class ShippingSnail : Snail, IShippingVehicle
     {
-        public uint TopSpeed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public uint MaxDistancePerRefuel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public uint TopSpeed { get; set; }
+        public uint MaxDistancePerRefuel { get; set; }
 
-        public uint MaxWeight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public uint MaxWeight { get; set; }
 
         public ShippingSnail()
         {
-            
+            MaxDistancePerRefuel = 20;
+            MaxWeight = 1;
+            TopSpeed = 1;
         }
     }
 }
